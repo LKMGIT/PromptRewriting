@@ -1,0 +1,93 @@
+########################################
+# Python / Bytecode / Cache
+########################################
+__pycache__/
+*.py[cod]
+*$py.class
+
+########################################
+# Virtual Environments
+########################################
+.venv/
+venv/
+env/
+ENV/
+virtualenv/
+pip-wheel-metadata/
+
+########################################
+# Jupyter / IPython
+########################################
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+# 노트북 출력/임시파일이 너무 큰 경우 여기서 제외 가능
+# RAG.ipynb
+
+########################################
+# ML / Model Artifacts (용량 큰 파일)
+########################################
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.pkl
+*.joblib
+*.onnx
+*.h5
+*.npz
+
+# 학습 결과 폴더(재생성 가능하면 제외)
+Web/t5_finetuned_result/
+t5_finetuned_result/
+checkpoints/
+runs/
+wandb/
+tensorboard/
+logs/
+log/
+
+########################################
+# Data files (원하면 유지/조정)
+########################################
+*.csv
+*.tsv
+*.parquet
+*.jsonl
+*.zip
+*.tar
+*.gz
+
+data/
+dataset/
+datasets/
+
+########################################
+# Environment / Secrets
+########################################
+.env
+.env.*
+*.env
+secrets.json
+config.local.*
+apikeys.txt
+
+########################################
+# OS / Editor / IDE
+########################################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+########################################
+# Build / Dist (있다면)
+########################################
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>프롬프트 리라이팅</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .output {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-left: 5px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>📌 프롬프트 리라이팅 with RAG</h1>
+    <form method="post">
+        <label for="user_input">사용자 입력 프롬프트:</label><br>
+        <input type="text" id="user_input" name="user_input" value="{{ user_input or '' }}"><br>
+        <button type="submit">개선하기</button>
+    </form>
+
+    {% if result %}
+    <div class="output">
+        <h3>✨ 개선된 프롬프트:</h3>
+        <p>{{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
