@@ -85,11 +85,43 @@ requirements.txt에는 대략 아래와 같은 패키지가 포함됩니다.
 - numpy
 
  ### 5.2 서버 실행 및 접속
- ```text
-uvicorn app:app --reload
 ```
- ```text
-http://localhost:8000
+## 필수 요구 사항
+
+- **Python**: 3.11 버전 이상을 권장합니다.
+
+## 설치 방법
+
+1. **Python 설치** (이미 설치된 경우 생략 가능):
+   - **Windows** (winget 사용):
+     ```powershell
+     winget install -e --id Python.Python.3.11
+     ```
+
+2. **의존성 패키지 설치**:
+   프로젝트 루트 디렉토리에서 다음 명령어를 실행합니다:
+   ```bash
+   pip install -r requirements.txt.txt
+   pip install fastapi uvicorn transformers sentence-transformers
+   ```
+   *(참고: 원활한 실행을 위해 추가 패키지를 함께 설치합니다).*
+
+## 실행 방법
+
+1. **Web 디렉토리로 이동**:
+   ```bash
+   cd Web
+   ```
+
+2. **서버 시작**:
+   ```bash
+   python -m uvicorn app:app --reload
+   ```
+   *만약 `python` 명령어가 실행되지 않는다면, python 실행 파일의 전체 경로를 사용하세요.*
+
+3. **앱 접속**:
+   브라우저를 열고 다음 주소로 접속하세요: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
 ```
 
 ## 6. 예시 입출력 
